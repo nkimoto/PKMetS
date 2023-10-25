@@ -1,0 +1,14 @@
+## Study Protocol
+- Input
+    - Health checkup data included in JMDC data（n：460,443, observation period (average)：36.8 months）
+- Model
+    - [Cox proportional hazards model](https://lifelines.readthedocs.io/en/latest/fitters/regression/CoxPHFitter.html)
+        - Explanatory Variables：
+            - Blood test items in the first year (continuous variables)
+            - Questionnaire items other than smoking in the first year (discrete value ⇒ dummy variable)
+        - Adjustment Variables：
+            - Sex
+            - Age
+            - Smoking status
+- Outcome definition
+    - Patients with [ICD10: C25 Malignant neoplasm of pancreas <tumor>](https://icd.who.int/browse10/2019/en#/C25)
